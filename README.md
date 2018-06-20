@@ -1,6 +1,6 @@
 # object_detection_demo说明
 ## 一：目录结构说明
---object_detection_demo
+--object_detection_demo</br>
 |_____data   ：存放record文件、配置文件和标签文件</br>
 |_____dataset：存放测试和训练的图片数据集</br>
 |_____models ：存放训练过程中模型文件</br>
@@ -8,11 +8,10 @@
 |_____tools  ：数据集制作工具：请参考：https://github.com/PanJinquan/labelImg</br>
 
 ## 二：配置说明
-首先把TensoFlow的models/research等相关模块导入的Python搜索路径中，避免查不到文件出错的问题，方法是
-在python的Lib\site-packages目录下，新建一个*.pth文件（文件名随意），然后把models/research、models/object_detection和models/research/slim的绝对路径编辑到文件中：
-> D:\Anaconda3\envs\models\research
-> D:\Anaconda3\envs\models\research\object_detection
-> D:\Anaconda3\envs\models\research\slim
+首先把TensoFlow的models/research等相关模块导入的Python搜索路径中，避免查不到文件出错的问题，方法是在python的Lib\site-packages目录下，新建一个*.pth文件（文件名随意），然后把models/research、models/object_detection和models/research/slim的绝对路径编辑到文件中：
+> D:\Anaconda3\envs\models\research</br>
+> D:\Anaconda3\envs\models\research\object_detection</br>
+> D:\Anaconda3\envs\models\research\slim</br>
 
 PS：相关的配置文件，凡是用到相对路径，都是工作在当前object_detection_demo目录下
 
@@ -111,8 +110,8 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
   
 >  python D:/Anaconda3/envs/models/research/object_detection/train.py --logtostderr --train_dir=models/ --pipeline_config_path=data/ssd_mobilenet_v1_coco.config
 
->  PS：若出错：ImportError: cannot import name 'preprocessor_pb2'，说明你的models/object_detection没有配置好，你需要用protoc命令将生成——pb2.py的文件
-
+PS：若出现错误：ImportError: cannot import name 'preprocessor_pb2'，说明你的models/object_detection没有配置好，你需要用protoc命令将生成*pb2.py的文件
+> protoc object_detection/protos/*.proto --python_out=.  
 
 **8.输出模型**
 
