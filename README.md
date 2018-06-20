@@ -102,6 +102,7 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 #from_detection_checkpoint: true
 ```
 **7.开始训练模型**
+
   由于train.py在models/research/object_detection目录中，而我们的工程目录是models/research/object_detection_demo，因此需要注意路径问题
   在object_detection_demo工程目录时，可直接使用以下命令，进行训练：注意train.py的路径：
 >  python ../object_detection/train.py --logtostderr --train_dir=models/  --pipeline_config_path=data/ssd_mobilenet_v1_coco.config </br>
@@ -111,10 +112,11 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 >  python D:/Anaconda3/envs/models/research/object_detection/train.py --logtostderr --train_dir=models/ --pipeline_config_path=data/ssd_mobilenet_v1_coco.config
 
 **8.输出模型**
-> python export_inference_graph.py \
---input_type image_tensor \
---pipeline_config_path data/ssd_mobilenet_v1_coco.config \
---trained_checkpoint_prefix models/model.ckpt-110 \
+
+> python export_inference_graph.py \\
+--input_type image_tensor \\
+--pipeline_config_path data/ssd_mobilenet_v1_coco.config \\
+--trained_checkpoint_prefix models/model.ckpt-110 \\
 --output_directory models/pb
 
 或者
