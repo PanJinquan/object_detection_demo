@@ -44,7 +44,7 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 ```
 **6.把配置文件放在training文件夹下：training/ssd_mobilenet_v1_coco.config，如下修改：**
 
-1.修改训练数据的路径和数据标签路径
+(1).修改训练数据的路径和数据标签路径
 ```
 	train_input_reader: {
 	  tf_record_input_reader {
@@ -53,7 +53,7 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 	  label_map_path: "data/label_map.pbtxt"
 	}
 ```
-2.修改测试数据的路径和数据标签路径
+(2).修改测试数据的路径和数据标签路径
 ```
 	eval_input_reader: {
 	  tf_record_input_reader {
@@ -64,7 +64,7 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 	  num_readers: 1
 	}
 ```
-3.修改num_classes标签类别数，这里只两种类别，所以num_classes: 2
+(3).修改num_classes标签类别数，这里只两种类别，所以num_classes: 2
 ```
 	  ssd {
 		num_classes: 2
@@ -77,7 +77,7 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 		  }
 		}
 ```
-4.（可选修改）batch_size是每次迭代的数据数，我这里设为1，当然也可以是8、16等任意数据，看你内存大小吧
+(4).（可选修改）batch_size是每次迭代的数据数，我这里设为1，当然也可以是8、16等任意数据，看你内存大小吧
 ```
 	train_config: {
 	  batch_size: 24
@@ -96,7 +96,7 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 		}
 	  }
 ```
-5.（可选修改）变量fine_tune_checkpoint即微调检查点文件,用于指示以前模型的路径以获得学习，在应用转移学习上被使用。转移学习是一种机器学习方法，它专注于将从一个问题中获得的知识应用到另一个问题上。这里可以注释掉：
+(5).（可选修改）变量fine_tune_checkpoint即微调检查点文件,用于指示以前模型的路径以获得学习，在应用转移学习上被使用。转移学习是一种机器学习方法，它专注于将从一个问题中获得的知识应用到另一个问题上。这里可以注释掉：
 ```
 #fine_tune_checkpoint: "ssd_mobilenet_v1_coco_11_06_2017/model.ckpt"
 #from_detection_checkpoint: true
@@ -122,8 +122,10 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 > python ../object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path data/ssd_mobilenet_v1_coco.config --trained_checkpoint_prefix models/model.ckpt-110 --output_directory models/pb
 
 **9.测试模型**
+
 把模型测试的图片放在test_images文件夹中，运行object_detection_test.py或者object_detection_test_02.py文件
 
 
 ## 四：参考资料
+
 [1] https://zhuanlan.zhihu.com/p/35854575
