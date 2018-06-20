@@ -13,11 +13,11 @@ import xml.etree.ElementTree as ET
 
 #train数据的目录
 print("project_dir=",os.getcwd())                             #当前工作目录
-train_image_path = os.path.join(os.getcwd(), 'dataset/train')   #训练集的路径
+train_image_path = os.path.join(os.getcwd(), 'dataset','train')   #训练集的路径
 train_save_csv=os.path.join(os.getcwd(), 'dataset','train.csv')#保存csv文件的路径
 
 #test数据的目录
-test_image_path = os.path.join(os.getcwd(), 'dataset/test')    #测试集的路径
+test_image_path = os.path.join(os.getcwd(), 'dataset','test')    #测试集的路径
 test_save_csv=os.path.join(os.getcwd(), 'dataset','test.csv')  #保存csv文件的路径
 
 def xml_to_csv(path):

@@ -1,20 +1,5 @@
 """
-Usage:
-  # From tensorflow/models/
-  # Create train data:
-python cvs_tf_record.py --csv_input=image/train.csv  --output_path=data/train.record
-  # Create test data:
-python cvs_tf_record.py --csv_input=image/test.csv  --output_path=data/test.record
-  需要修改三处
-  os.chdir('D:\\python3\\models-master\\research\\object_detection\\')
-  path = os.path.join(os.getcwd(), 'images/train')
-  def class_text_to_int(row_label): #对应的标签返回一个整数，后面会有文件用到
-    if row_label == 'ZJL':
-        return 1
-    elif row_label == 'CYX':
-        return 2
-    else:
-        None
+
 """
 
 import os
@@ -26,16 +11,15 @@ from PIL import Image
 from object_detection.utils import dataset_util
 from collections import namedtuple, OrderedDict
 
-# os.chdir('D:\\Anaconda3\\envs\\models\\research\\object_detection\\')
 
 #训练
-# image_dir = os.path.join(os.getcwd(), 'image\\train')          # 训练图片所在目录
-# csv_path = os.path.join(os.getcwd(), 'image\\train.csv')      # 训练图像的csv文件的路径
-# record_path=os.path.join(os.getcwd(), 'data\\train.record')   # 输出：保存训练record文件的位置
+image_dir = os.path.join(os.getcwd(), 'dataset','train')          # 训练图片所在目录
+csv_path = os.path.join(os.getcwd(), 'dataset','train.csv')      # 训练图像的csv文件的路径
+record_path=os.path.join(os.getcwd(), 'data','train.record')   # 输出：保存训练record文件的位置
 #测试
-image_dir = os.path.join(os.getcwd(), 'dataset\\test')          # 测试图片所在目录
-csv_path = os.path.join(os.getcwd(), 'dataset\\test.csv')      # 测试图像的csv文件的路径
-record_path=os.path.join(os.getcwd(), 'data\\test.record')   # 输出：保存测试record文件的位置
+# image_dir = os.path.join(os.getcwd(), 'dataset','test')          # 测试图片所在目录
+# csv_path = os.path.join(os.getcwd(), 'dataset','test.csv')      # 测试图像的csv文件的路径
+# record_path=os.path.join(os.getcwd(), 'data','test.record')   # 输出：保存测试record文件的位置
 
 
 #通过命令行输入路径参数

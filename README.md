@@ -111,6 +111,9 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
   
 >  python D:/Anaconda3/envs/models/research/object_detection/train.py --logtostderr --train_dir=models/ --pipeline_config_path=data/ssd_mobilenet_v1_coco.config
 
+>  PS：若出错：ImportError: cannot import name 'preprocessor_pb2'，说明你的models/object_detection没有配置好，你需要用protoc命令将生成——pb2.py的文件
+
+
 **8.输出模型**
 
 > python export_inference_graph.py \
