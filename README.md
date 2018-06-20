@@ -19,13 +19,13 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 ## 三：训练流程步骤：
 **1.准备训练图集（train dataset）和测试图集（test dataset）**
 
-**2.使用“labelImg”制作训练train数据和测试test数据，保存为*.xml文件**
+**2.使用“labelImg”制作训练train数据和测试test数据，保存为.xml文件 **
 
 **3.将xml数据转为csv文件，方便转换数据**
 
 **4.将数据转为record文件：**
->  --可以在“cvs_tf_record.py”文件中修改训练/测试文件路径，生成record文件
->  --也可以使用命令行，进行转换：如</br>
+>  可以在“cvs_tf_record.py”文件中修改训练/测试文件路径，生成record文件
+>  也可以使用命令行，进行转换：如</br>
   python cvs_tf_record.py    --image_dir=    --csv_path=   --record_path=
 
 **5.新建标签映射文件data/label_map.pbtxt，其id从1开始：**
@@ -113,11 +113,11 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 
 **8.输出模型**
 
-> python export_inference_graph.py \\
---input_type image_tensor \\
---pipeline_config_path data/ssd_mobilenet_v1_coco.config \\
---trained_checkpoint_prefix models/model.ckpt-110 \\
---output_directory models/pb
+> python export_inference_graph.py \
+> --input_type image_tensor \
+> --pipeline_config_path data/ssd_mobilenet_v1_coco.config \
+> --trained_checkpoint_prefix models/model.ckpt-110 \
+> --output_directory models/pb
 
 或者
 
