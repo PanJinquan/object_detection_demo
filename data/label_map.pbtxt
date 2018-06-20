@@ -1,0 +1,10 @@
+item {
+ name: "dog"
+ id: 1
+ display_name: "dog"
+}
+item {
+ name: "person"
+ id: 2
+ display_name: "person"
+}

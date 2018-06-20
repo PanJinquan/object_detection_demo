@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>SCUT-FBP-20.jpg</filename>
+	<path>D:\tensorflow\image\test\SCUT-FBP-20.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>660</width>
+		<height>868</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>115</xmin>
+			<ymin>163</ymin>
+			<xmax>591</xmax>
+			<ymax>741</ymax>
+		</bndbox>
+	</object>
+</annotation>

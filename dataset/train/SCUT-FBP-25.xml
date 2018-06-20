@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>SCUT-FBP-25.jpg</filename>
+	<path>D:\tensorflow\image\train\SCUT-FBP-25.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>713</width>
+		<height>937</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>92</xmin>
+			<ymin>114</ymin>
+			<xmax>600</xmax>
+			<ymax>772</ymax>
+		</bndbox>
+	</object>
+</annotation>
