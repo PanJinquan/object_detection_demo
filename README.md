@@ -19,7 +19,7 @@ PS：相关的配置文件，凡是用到相对路径，都是工作在当前obj
 ## 三：训练流程步骤：
 **1.准备训练图集（train dataset）和测试图集（test dataset）**
 
-**2.使用“labelImg”制作训练train数据和测试test数据，保存为.xml文件 **
+**2.使用“labelImg”制作训练train数据和测试test数据，保存为.xml文件**
 
 **3.将xml数据转为csv文件，方便转换数据**
 
