@@ -87,4 +87,5 @@ with detection_graph.as_default():
           line_thickness=8)
       plt.figure(figsize=IMAGE_SIZE)
       plt.imshow(image_np)
-      plt.show()
+      # plt.savefig("others/pre_01.jpg")
+      plt.imsave("others/pre_01.jpg",image_np)

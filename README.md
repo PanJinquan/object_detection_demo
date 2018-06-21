@@ -129,6 +129,8 @@ PS：若出现错误：ImportError: cannot import name 'preprocessor_pb2'，说�
 
 把模型测试的图片放在test_images文件夹中，运行object_detection_test.py或者object_detection_test_02.py文件
 
+预测结果：
+<img src="others/pre_01.jpg" width="300"/>
 
 ## 四：参考资料
 
